@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    h1 Add New Product
+    form(action="/products/add",method="post")
+        .form-group
+            label(for="id") Product ID
+            input#name(type="text", class="form-control", name="id")
+        .form-group
+            label(for="name") Product Name
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            label(for="category") Product Category
+            input#name(type="text", class="form-control", name="category")
+        .form-group
+            label(for="price") Product Price
+            input#name(type="text", class="form-control", name="price")
+        .form-group
+            label(for="prDetails") Product Details
+            input#name(type="text", class="form-control", name="prDetails")
+        .form-group
+            <label for="prImage">Select image:</label>
+            <input type="file" id="prImage" name="prImage" accept="image/*">
+            
+        input(type="submit", class="btn btn-info")
+    
